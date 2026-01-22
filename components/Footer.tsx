@@ -87,9 +87,6 @@ const Footer = () => {
                     <p className="text-sm text-gray-400 text-center md:text-left">
                         &copy; {currentYear} KaaryaHire. All rights reserved.
                     </p>
-                    <p className="text-sm text-gray-500 mt-2 md:mt-0">
-                        Designed for Excellence
-                    </p>
                 </div>
             </div>
         </footer>

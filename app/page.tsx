@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Users, Building2, TrendingUp, MapPin, GraduationCap, Clock, UserCheck, ShieldCheck, HeartHandshake, Scale } from "lucide-react";
+import { ArrowRight, CheckCircle2, Users, Building2, TrendingUp, MapPin, GraduationCap, Clock, UserCheck, ShieldCheck, HeartHandshake, Scale, Rocket, Store, Briefcase, Landmark } from "lucide-react";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -22,36 +22,53 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Left Column: Text Content */}
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-sm font-medium text-secondary mb-6">
-                <span className="flex h-2 w-2 rounded-full bg-secondary mr-2"></span>
+            <div className="text-center lg:text-left relative z-10">
+              <div className="inline-flex items-center rounded-full border border-teal-100 bg-teal-50/50 px-4 py-1.5 text-sm font-semibold text-secondary mb-8 ring-1 ring-teal-500/10">
+                <span className="relative flex h-2 w-2 mr-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
+                </span>
                 We are hiring 24/7 across India
               </div>
-              <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl lg:leading-tight">
-                Building Tomorrow’s <br />
-                <span className="text-secondary">Workforce Today.</span>
+
+              <h1 className="text-5xl font-extrabold tracking-tight text-primary sm:text-6xl lg:text-7xl lg:leading-[1.1] mb-6">
+                Recruit Industry <br className="hidden lg:block" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-blue-600">
+                  Leaders & Experts
+                </span>
               </h1>
-              <p className="mt-6 text-lg leading-relaxed text-muted max-w-2xl mx-auto lg:mx-0">
-                KaaryaHire is your strategic partner in talent acquisition. We connect ambitious companies with exceptional professionals to drive growth and innovation.
+
+              <p className="mt-6 text-lg sm:text-xl leading-relaxed text-muted max-w-2xl mx-auto lg:mx-0 font-medium">
+                KaaryaHire connects ambitious companies with exceptional talent. From rapid scaling to executive search, we are your strategic partner in growth.
               </p>
+
               <div className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-lg bg-secondary px-8 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all"
+                  className="inline-flex items-center justify-center rounded-xl bg-secondary px-8 py-4 text-lg font-bold text-white shadow-lg shadow-teal-500/30 hover:bg-teal-700 hover:shadow-xl hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 transition-all duration-300"
                 >
-                  Explore Services
+                  Start Hiring Now
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-8 py-3.5 text-base font-semibold text-gray-900 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-200 transition-all group"
+                  className="inline-flex items-center justify-center rounded-xl border border-gray-200 bg-white px-8 py-4 text-lg font-bold text-gray-900 shadow-sm hover:bg-gray-50 hover:border-gray-300 hover:-translate-y-0.5 transition-all duration-300 group"
                 >
                   Contact Us
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-5 w-5 text-gray-400 group-hover:text-secondary group-hover:translate-x-1 transition-all" />
                 </Link>
               </div>
-              <div className="mt-10 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-500 font-medium">
-                <span className="flex items-center"><CheckCircle2 className="h-4 w-4 text-green-500 mr-2" /> Verified Candidates</span>
-                <span className="flex items-center"><CheckCircle2 className="h-4 w-4 text-green-500 mr-2" /> Fast Turnaround</span>
+
+              <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 text-sm font-semibold text-gray-500">
+                <div className="flex items-center gap-2">
+                  <div className="flex -space-x-2">
+                    <div className="h-8 w-8 rounded-full ring-2 ring-white bg-gray-200"></div>
+                    <div className="h-8 w-8 rounded-full ring-2 ring-white bg-gray-300"></div>
+                    <div className="h-8 w-8 rounded-full ring-2 ring-white bg-gray-400"></div>
+                  </div>
+                  <span className="text-primary">500+ Roles Filled</span>
+                </div>
+                <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+                <span className="flex items-center text-primary"><CheckCircle2 className="h-5 w-5 text-teal-500 mr-2" /> 98% Client Retention</span>
               </div>
             </div>
 
@@ -189,20 +206,20 @@ export default function Home() {
               <div className="h-12 w-12 bg-blue-50 rounded-lg flex items-center justify-center text-secondary mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
                 <MapPin className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2">India-Focused Hiring</h3>
+              <h3 className="text-lg font-bold text-primary mb-2">Pan-India Reach</h3>
               <p className="text-sm text-muted leading-relaxed">
-                Deep expertise in local details and regional talent pools across India.
+                We don't just find candidates; we map talent across every major hub in India to find the perfect regional fit.
               </p>
             </div>
 
             {/* Card 2 */}
             <div className="group bg-white rounded-xl p-6 shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-secondary/30">
               <div className="h-12 w-12 bg-blue-50 rounded-lg flex items-center justify-center text-secondary mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
-                <GraduationCap className="h-6 w-6" />
+                <UserCheck className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2">Fresher & Experienced</h3>
+              <h3 className="text-lg font-bold text-primary mb-2">Quality First</h3>
               <p className="text-sm text-muted leading-relaxed">
-                From campus recruitment to lateral hiring, we cover all experience levels.
+                Our rigorous pre-screening ensures you interview only top 5% of relevant talent, saving you valuable time.
               </p>
             </div>
 
@@ -211,20 +228,20 @@ export default function Home() {
               <div className="h-12 w-12 bg-blue-50 rounded-lg flex items-center justify-center text-secondary mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
                 <Clock className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2">Fast Turnaround</h3>
+              <h3 className="text-lg font-bold text-primary mb-2">Speed to Hire</h3>
               <p className="text-sm text-muted leading-relaxed">
-                Accelerated screening process to close critical open positions faster.
+                We close positions 40% faster than industry average through our proactive candidate pipelines.
               </p>
             </div>
 
             {/* Card 4 */}
             <div className="group bg-white rounded-xl p-6 shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-secondary/30">
               <div className="h-12 w-12 bg-blue-50 rounded-lg flex items-center justify-center text-secondary mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
-                <UserCheck className="h-6 w-6" />
+                <Scale className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2">Personalized Service</h3>
+              <h3 className="text-lg font-bold text-primary mb-2">Zero Compromise</h3>
               <p className="text-sm text-muted leading-relaxed">
-                Tailored recruitment strategies that align with your specific company culture.
+                100% transparent and ethical recruitment process. No hidden clauses, just honest partnership.
               </p>
             </div>
 
@@ -295,56 +312,108 @@ export default function Home() {
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/services" className="text-sm font-semibold text-secondary hover:text-blue-700">
+            <Link href="/services" className="text-sm font-semibold text-secondary hover:text-teal-700">
               View All Services <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Trust & Credibility */}
-      <section className="bg-white py-16 sm:py-24 border-t border-gray-100">
+      {/* Who We Help */}
+      <section className="py-16 sm:py-24 bg-slate-50 border-y border-gray-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center mb-12">
+          <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-              Committed to <span className="text-secondary">Excellence</span> & Integrity
+              Who We Help
             </h2>
             <p className="mt-4 text-lg text-muted">
-              We build relationships on trust. Our commitment to high ethical standards and professional service sets us apart.
+              Whether you are building from scratch or scaling to new heights, we have the right talent for you.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card 1: Startups */}
+            <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100 text-center hover:border-teal-200 hover:shadow-md transition-all">
+              <div className="mx-auto h-12 w-12 bg-teal-50 rounded-full flex items-center justify-center text-secondary mb-4">
+                <Rocket className="h-6 w-6" />
+              </div>
+              <h3 className="text-lg font-bold text-primary mb-2">Startups</h3>
+              <p className="text-sm text-muted">Building your founding team with high-energy talent.</p>
+            </div>
+
+            {/* Card 2: SMEs */}
+            <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100 text-center hover:border-teal-200 hover:shadow-md transition-all">
+              <div className="mx-auto h-12 w-12 bg-teal-50 rounded-full flex items-center justify-center text-secondary mb-4">
+                <Store className="h-6 w-6" />
+              </div>
+              <h3 className="text-lg font-bold text-primary">SMEs</h3>
+              <p className="text-sm text-muted">Reliable hiring to stabilize and grow your operations.</p>
+            </div>
+
+            {/* Card 3: Growing Enterprises */}
+            <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100 text-center hover:border-teal-200 hover:shadow-md transition-all">
+              <div className="mx-auto h-12 w-12 bg-teal-50 rounded-full flex items-center justify-center text-secondary mb-4">
+                <Landmark className="h-6 w-6" />
+              </div>
+              <h3 className="text-lg font-bold text-primary">Enterprises</h3>
+              <p className="text-sm text-muted">Volume hiring and niche executive search at scale.</p>
+            </div>
+
+            {/* Card 4: Fresh Graduates */}
+            <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100 text-center hover:border-teal-200 hover:shadow-md transition-all">
+              <div className="mx-auto h-12 w-12 bg-teal-50 rounded-full flex items-center justify-center text-secondary mb-4">
+                <GraduationCap className="h-6 w-6" />
+              </div>
+              <h3 className="text-lg font-bold text-primary">Graduates</h3>
+              <p className="text-sm text-muted">Connecting fresh talent with their dream first jobs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust & Credibility */}
+      <section className="bg-white py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+              Reliability You Can Count On
+            </h2>
+            <p className="mt-4 text-lg text-muted">
+              We build lasting partnerships through consistent delivery and unwavering ethics.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Trust Item 1 */}
-            <div className="flex flex-col items-center text-center p-6 bg-slate-50 rounded-2xl transition-transform hover:scale-105 duration-300">
-              <div className="h-14 w-14 bg-white rounded-full flex items-center justify-center shadow-sm mb-4 text-secondary">
+            <div className="flex flex-col items-center text-center">
+              <div className="h-16 w-16 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 text-secondary transform transition-transform hover:scale-110 hover:rotate-3 duration-300">
                 <ShieldCheck className="h-8 w-8" />
               </div>
-              <h3 className="text-lg font-bold text-primary">Industry-Focused Recruitment</h3>
-              <p className="mt-2 text-sm text-muted">
-                Specialized knowledge across key sectors to ensure precise candidate matching for your specific needs.
+              <h3 className="text-xl font-bold text-primary mb-3">Uncompromising Quality</h3>
+              <p className="text-muted leading-relaxed">
+                We adhere to strict quality standards. We never submit a candidate we wouldn't hire ourselves.
               </p>
             </div>
 
             {/* Trust Item 2 */}
-            <div className="flex flex-col items-center text-center p-6 bg-slate-50 rounded-2xl transition-transform hover:scale-105 duration-300">
-              <div className="h-14 w-14 bg-white rounded-full flex items-center justify-center shadow-sm mb-4 text-secondary">
+            <div className="flex flex-col items-center text-center">
+              <div className="h-16 w-16 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 text-secondary transform transition-transform hover:scale-110 hover:rotate-3 duration-300">
                 <HeartHandshake className="h-8 w-8" />
               </div>
-              <h3 className="text-lg font-bold text-primary">Dedicated Hiring Support</h3>
-              <p className="mt-2 text-sm text-muted">
-                A dedicated account manager guides you through every step, from initial consultation to final onboarding.
+              <h3 className="text-xl font-bold text-primary mb-3">Transparent Partnership</h3>
+              <p className="text-muted leading-relaxed">
+                Full visibility into our process. No hidden fees, no surprises—just honest collaboration.
               </p>
             </div>
 
             {/* Trust Item 3 */}
-            <div className="flex flex-col items-center text-center p-6 bg-slate-50 rounded-2xl transition-transform hover:scale-105 duration-300">
-              <div className="h-14 w-14 bg-white rounded-full flex items-center justify-center shadow-sm mb-4 text-secondary">
+            <div className="flex flex-col items-center text-center">
+              <div className="h-16 w-16 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 text-secondary transform transition-transform hover:scale-110 hover:rotate-3 duration-300">
                 <Scale className="h-8 w-8" />
               </div>
-              <h3 className="text-lg font-bold text-primary">Ethical & Transparent</h3>
-              <p className="mt-2 text-sm text-muted">
-                We maintain 100% transparency with clients and candidates, ensuring a fair and honest recruitment process.
+              <h3 className="text-xl font-bold text-primary mb-3">Long-Term Success</h3>
+              <p className="text-muted leading-relaxed">
+                Our goal isn't just to fill a seat, but to find a candidate who drives retention and growth.
               </p>
             </div>
           </div>
@@ -352,24 +421,37 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Ready to Build Your Dream Team?
-            </h2>
-            <p className="mt-4 text-lg text-gray-300">
-              Let's discuss how KaaryaHire can streamline your recruitment process and finding the perfect match.
-            </p>
-            <div className="mt-10 flex justify-center gap-x-6">
-              <Link
-                href="/contact"
-                className="rounded-md bg-white px-6 py-3 text-base font-semibold text-primary shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                Contact Us Today
-              </Link>
-            </div>
+      <section className="relative overflow-hidden bg-primary py-24 sm:py-32">
+        {/* Abstract Background Design */}
+        <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl mb-6">
+            Stop Searching. <br className="hidden sm:block" />
+            <span className="text-teal-400">Start Hiring.</span>
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-300 leading-relaxed font-light">
+            Don't let open positions slow down your growth. Partner with KaaryaHire today and experience the difference specialist recruitment makes.
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-lg font-bold text-primary shadow-xl hover:bg-teal-50 hover:scale-105 transition-all duration-300"
+            >
+              Get a Free Consultation
+              <ArrowRight className="ml-2 h-5 w-5 text-secondary" />
+            </Link>
+            <Link
+              href="/services"
+              className="inline-flex items-center justify-center rounded-xl border border-gray-600 bg-transparent px-8 py-4 text-lg font-semibold text-white hover:bg-white/10 hover:border-white transition-all duration-300"
+            >
+              Browse Services
+            </Link>
           </div>
+          <p className="mt-8 text-sm text-gray-400">
+            No obligation. 100% Confidential.
+          </p>
         </div>
       </section>
     </div>

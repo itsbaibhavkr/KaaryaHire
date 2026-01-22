@@ -42,7 +42,7 @@ const Navbar = () => {
                         ))}
                         <Link
                             href="/contact"
-                            className="inline-flex items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all"
+                            className="inline-flex items-center justify-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all"
                         >
                             Get Started
                         </Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
                         <button
                             onClick={toggleMenu}
                             type="button"
-                            className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                            className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500"
                             aria-controls="mobile-menu"
                             aria-expanded={isOpen}
                         >
@@ -70,23 +70,23 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden bg-white border-b border-gray-100" id="mobile-menu">
-                    <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+                <div className="md:hidden bg-white border-b border-gray-100 shadow-xl" id="mobile-menu">
+                    <div className="space-y-1 px-4 pb-6 pt-4">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-secondary"
+                                className="block rounded-lg px-3 py-3 text-base font-medium text-gray-700 hover:bg-slate-50 hover:text-secondary transition-colors"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {link.name}
                             </Link>
                         ))}
-                        <div className="mt-4 px-3">
+                        <div className="mt-6">
                             <Link
                                 href="/contact"
                                 onClick={() => setIsOpen(false)}
-                                className="block w-full rounded-md bg-secondary px-4 py-2 text-center text-base font-medium text-white shadow-md hover:bg-blue-700"
+                                className="block w-full rounded-xl bg-secondary px-4 py-3 text-center text-base font-bold text-white shadow-md hover:bg-teal-700 transition-all"
                             >
                                 Get Started
                             </Link>

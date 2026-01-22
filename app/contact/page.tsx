@@ -43,8 +43,8 @@ export default function ContactPage() {
                                     <p className="mt-2 text-muted">
                                         Mon-Fri from 9am to 6pm
                                     </p>
-                                    <a href="tel:+919876543210" className="mt-1 block text-lg font-semibold text-secondary hover:text-blue-700">
-                                        +91 98765 43210
+                                    <a href="tel:+911234567890" className="mt-1 block text-lg font-semibold text-secondary hover:text-blue-700">
+                                        +91 12345 67890
                                     </a>
                                 </div>
                             </div>
@@ -148,7 +148,7 @@ export default function ContactPage() {
                                             id="phone"
                                             autoComplete="tel"
                                             className="block w-full rounded-md border-0 py-2.5 px-3.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6 transition-shadow"
-                                            placeholder="+91 98765 43210"
+                                            placeholder="+91 12345 67890"
                                         />
                                     </div>
                                 </div>
@@ -173,7 +173,7 @@ export default function ContactPage() {
                             <div>
                                 <button
                                     type="submit"
-                                    className="flex w-full justify-center items-center rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all"
+                                    className="flex w-full justify-center items-center rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 transition-all"
                                 >
                                     Send Message <Send className="ml-2 h-4 w-4" />
                                 </button>

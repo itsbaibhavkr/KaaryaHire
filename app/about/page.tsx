@@ -22,83 +22,79 @@ export default function AboutPage() {
                 </div>
             </div>
 
-            {/* Who We Are */}
+            {/* Who We Are: Founding Vision */}
             <section className="py-16 sm:py-24">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-                        <div>
-                            <h2 className="text-3xl font-bold tracking-tight text-primary">Who We Are</h2>
-                            <p className="mt-6 text-lg text-muted leading-relaxed">
-                                KaaryaHire is a dynamic recruitment firm dedicated to bridging the talent gap in the Indian market.
-                                With a deep understanding of the diverse industrial landscape, we specialize in identifying,
-                                screening, and placing candidates who not only fit the job description but also the company culture.
+                        <div className="relative z-10">
+                            <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl mb-6">
+                                More Than Just a <br /> <span className="text-secondary">Resume Database.</span>
+                            </h2>
+                            <p className="text-lg text-muted leading-relaxed mb-6">
+                                KaaryaHire started with a simple observation: the Indian recruitment market was flooded with quantity, but starved for quality. Agencies were becoming resume-forwarding services, losing the human element of hiring.
                             </p>
-                            <p className="mt-4 text-lg text-muted leading-relaxed">
-                                Founded on the principles of integrity and excellence, we serve as a catalyst for professional growth
-                                and organizational success. Whether you are a startup looking for your founding team or an enterprise
-                                scaling operations, we have the expertise to deliver.
+                            <p className="text-lg text-muted leading-relaxed mb-8">
+                                We set out to change that. We view ourselves not as external vendors, but as an extension of your own HR team. We take the time to understand your culture, your code, and your vision before we ever send a candidate profile.
                             </p>
+                            <div className="flex flex-col sm:flex-row gap-6">
+                                <div className="border-l-4 border-secondary pl-4">
+                                    <p className="font-bold text-3xl text-primary">5+</p>
+                                    <p className="text-sm text-gray-500 font-medium">Years of Excellence</p>
+                                </div>
+                                <div className="border-l-4 border-secondary pl-4">
+                                    <p className="font-bold text-3xl text-primary">500+</p>
+                                    <p className="text-sm text-gray-500 font-medium">Placements Delivered</p>
+                                </div>
+                                <div className="border-l-4 border-secondary pl-4">
+                                    <p className="font-bold text-3xl text-primary">50+</p>
+                                    <p className="text-sm text-gray-500 font-medium">Partner Companies</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="mt-12 lg:mt-0 grid grid-cols-2 gap-4">
-                            <div className="bg-slate-50 rounded-2xl p-6 text-center">
-                                <ShieldCheck className="mx-auto h-10 w-10 text-secondary mb-3" />
-                                <h3 className="font-semibold text-primary">Trusted Partner</h3>
-                            </div>
-                            <div className="bg-slate-50 rounded-2xl p-6 text-center">
-                                <MapPin className="mx-auto h-10 w-10 text-secondary mb-3" />
-                                <h3 className="font-semibold text-primary">Pan-India Reach</h3>
-                            </div>
-                            <div className="bg-slate-50 rounded-2xl p-6 text-center">
-                                <Users className="mx-auto h-10 w-10 text-secondary mb-3" />
-                                <h3 className="font-semibold text-primary">Human Focussed</h3>
-                            </div>
-                            <div className="bg-slate-50 rounded-2xl p-6 text-center">
-                                <Award className="mx-auto h-10 w-10 text-secondary mb-3" />
-                                <h3 className="font-semibold text-primary">Industry Experts</h3>
+                        <div className="mt-12 lg:mt-0 relative">
+                            <div className="absolute top-0 right-0 -mr-8 -mt-8 w-64 h-64 bg-teal-50 rounded-full blur-3xl opacity-60"></div>
+                            <div className="relative bg-white rounded-2xl p-8 shadow-xl border border-gray-100 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                                <div className="flex items-center space-x-4 mb-6">
+                                    <div className="h-12 w-12 rounded-full bg-slate-100 flex items-center justify-center">
+                                        <Target className="h-6 w-6 text-primary" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-primary">Our Core Philosophy</h3>
+                                        <p className="text-xs text-muted">What drives us daily</p>
+                                    </div>
+                                </div>
+                                <p className="text-gray-600 italic">
+                                    "We believe that a bad hire costs more than just money—it costs time, morale, and momentum. Our job is to protect your company's momentum by finding people who fit perfectly."
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Mission & Vision */}
-            <section className="bg-primary py-16 sm:py-24 text-white">
+            {/* Mission & Vision Cards */}
+            <section className="bg-slate-50 py-16 sm:py-24">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-
-                        {/* Mission */}
-                        <div className="relative">
-                            <div className="absolute top-0 left-0 -ml-4 -mt-4 opacity-10">
-                                <Target className="w-24 h-24" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
+                            <div className="h-14 w-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-secondary">
+                                <Target className="h-7 w-7" />
                             </div>
-                            <div className="relative z-10">
-                                <h3 className="text-2xl font-bold text-secondary mb-4 flex items-center">
-                                    <Target className="mr-3 h-6 w-6" /> Our Mission
-                                </h3>
-                                <p className="text-lg text-gray-300 leading-relaxed">
-                                    To empower businesses by connecting them with exceptional talent, and to empower individuals
-                                    by providing them with career-defining opportunities. We aim to simplify the recruitment process
-                                    through transparency, speed, and accuracy.
-                                </p>
-                            </div>
+                            <h3 className="text-2xl font-bold text-primary mb-4">Our Mission</h3>
+                            <p className="text-muted leading-relaxed">
+                                To replace the "spray and pray" approach of traditional recruitment with a data-driven, human-centric methodology. We aim to reduce hiring timelines by 40% for our partners while ensuring 100% cultural fit.
+                            </p>
                         </div>
 
-                        {/* Vision */}
-                        <div className="relative">
-                            <div className="absolute top-0 left-0 -ml-4 -mt-4 opacity-10">
-                                <Lightbulb className="w-24 h-24" />
+                        <div className="bg-white p-10 rounded-3xl shadow-sm border border-gray-100">
+                            <div className="h-14 w-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-6 text-amber-500">
+                                <Lightbulb className="h-7 w-7" />
                             </div>
-                            <div className="relative z-10">
-                                <h3 className="text-2xl font-bold text-secondary mb-4 flex items-center">
-                                    <Lightbulb className="mr-3 h-6 w-6" /> Our Vision
-                                </h3>
-                                <p className="text-lg text-gray-300 leading-relaxed">
-                                    To be India's most trusted and preferred recruitment partner, known for creating meaningful
-                                    professional relationships and fostering an ecosystem where talent meets opportunity seamlessly.
-                                </p>
-                            </div>
+                            <h3 className="text-2xl font-bold text-primary mb-4">Our Vision</h3>
+                            <p className="text-muted leading-relaxed">
+                                To be the Pulse of Indian Hiring. We envision a future where KaaryaHire is the automatic first choice for any Indian company looking to scale their team with quality and speed.
+                            </p>
                         </div>
-
                     </div>
                 </div>
             </section>

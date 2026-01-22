@@ -9,34 +9,52 @@ export const metadata: Metadata = {
 
 const services = [
     {
-        title: "Recruitment Services",
-        description: "End-to-end recruitment solutions tailored to your specific industry needs. We handle sourcing, screening, and initial interviews to present you with only the best candidates.",
+        title: "End-to-End Recruitment",
+        bestFor: "Best for: Companies needing full-cycle hiring",
+        description: "From defining the role to the final offer letter, we manage the entire recruitment lifecycle. We act as your internal HR team, ensuring a seamless and professional hiring experience.",
+        outcome: "Outcome: Reduced time-to-hire by 40% and zero administrative burden.",
         icon: Search,
         features: ["Role Analysis", "Candidate Sourcing", "Initial Screening", "Interview Coordination"],
     },
     {
-        title: "Fresher Hiring",
-        description: "Tap into the raw potential of fresh graduates. We bridge the gap between campuses and corporates, helping you find bright, energetic talent eager to learn and grow.",
+        title: "Campus to Corporate",
+        bestFor: "Best for: Volume hiring & Fresh talent",
+        description: "Tap into the raw energy of India's top colleges. We manage campus drives and fresh graduate hiring to build your future leadership pipeline.",
+        outcome: "Outcome: Access to high-potential talent eager to learn and grow.",
         icon: GraduationCap,
-        features: ["Campus Drives", "Skill Assessment", "Aptitude Testing", "Onboarding Support"],
+        features: ["Campus Drives", "Aptitude Testing", "Group Discussions", "Onboarding Support"],
     },
     {
-        title: "Experienced Professional Hiring",
-        description: "Find seasoned experts who can hit the ground running. Our deep network allows us to headhunt niche talent and leadership profiles that drive business success.",
+        title: "Executive Search",
+        bestFor: "Best for: Senior Leadership & Niche Roles",
+        description: "Discreet and targeted headhunting for critical C-suite and upper-management roles. We map the market to find leaders who align with your long-term vision.",
+        outcome: "Outcome: Strategic hires that drive organizational transformation.",
         icon: Briefcase,
-        features: ["Executive Search", "Niche Skill Mapping", "Confidential Hiring", "Reference Checks"],
+        features: ["Market Mapping", "Competitor Analysis", "Confidential Hiring", "Leadership Assessment"],
     },
     {
-        title: "Internship / Contract Hiring",
-        description: "Flexible staffing solutions for short-term projects or seasonal spikes. Get skilled professionals on a contract basis or interns to support your teams.",
+        title: "Contract Staffing",
+        bestFor: "Best for: Projects & Seasonal Spikes",
+        description: "Flexible staffing solutions to scale your workforce up or down based on demand. Perfect for IT projects, seasonal sales, or interim requirements.",
+        outcome: "Outcome: Operational agility without long-term payroll liabilities.",
         icon: Clock,
-        features: ["Project-based Staffing", "Internship Programs", "Contract Management", "Payroll Support"],
+        features: ["Project-based Staffing", "Contract Management", "Statutory Compliance", "Payroll Support"],
     },
     {
-        title: "HR Consulting",
-        description: "Strategic HR advice to optimize your workforce management. From policy formulation to performance management systems, we help structure your people operations.",
+        title: "HR Advisory",
+        bestFor: "Best for: Startups & SMEs",
+        description: "Strategic HR consulting to help you build a culture of performance. We help setup policies, compensation structures, and performance management systems.",
+        outcome: "Outcome: A structured, compliant, and high-performance workplace.",
         icon: FileText,
-        features: ["Policy Formation", "Performance Mgmt", "Employee Engagement", "Compliance Audit"],
+        features: ["Policy Formation", "Org Structure Design", "Performance Mgmt", "Compliance Audit"],
+    },
+    {
+        title: "Tech Hiring Specialist",
+        bestFor: "Best for: Product Companies & IT Services",
+        description: "Specialized recruitment for the technology sector. We fancy ourselves as tech-insiders who understand the difference between Java and JavaScript.",
+        outcome: "Outcome: Technical talent that fits your stack and engineering culture.",
+        icon: CheckCircle,
+        features: ["Tech Screening", "Coding Assessments", "Stack-Specific Hiring", "Remote Talent"],
     },
 ];
 
@@ -64,19 +82,30 @@ export default function ServicesPage() {
                             key={index}
                             className="group relative flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:shadow-md hover:border-secondary/20 hover:-translate-y-1"
                         >
-                            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
-                                <service.icon className="h-6 w-6" />
+                            <div className="mb-6 flex items-start justify-between">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
+                                    <service.icon className="h-6 w-6" />
+                                </div>
+                                <span className="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-secondary ring-1 ring-inset ring-blue-700/10">
+                                    {service.bestFor}
+                                </span>
                             </div>
 
                             <h3 className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
                                 {service.title}
                             </h3>
 
-                            <p className="mt-4 flex-grow text-muted leading-relaxed">
+                            <p className="mt-4 text-muted leading-relaxed">
                                 {service.description}
                             </p>
 
-                            <div className="mt-8 border-t border-gray-50 pt-6">
+                            <div className="mt-4 p-3 bg-slate-50 rounded-lg border border-gray-100">
+                                <p className="text-sm font-semibold text-primary">
+                                    {service.outcome}
+                                </p>
+                            </div>
+
+                            <div className="mt-8 border-t border-gray-50 pt-6 mt-auto">
                                 <ul className="space-y-3">
                                     {service.features.map((feature, idx) => (
                                         <li key={idx} className="flex items-center text-sm text-gray-600">
