@@ -421,37 +421,31 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden bg-primary py-24 sm:py-32">
+      <section className="relative overflow-hidden bg-primary py-16">
         {/* Abstract Background Design */}
-        <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl mb-6">
-            Stop Searching. <br className="hidden sm:block" />
-            <span className="text-teal-400">Start Hiring.</span>
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-xl text-gray-300 leading-relaxed font-light">
-            Don't let open positions slow down your growth. Partner with KaaryaHire today and experience the difference specialist recruitment makes.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-lg font-bold text-primary shadow-xl hover:bg-teal-50 hover:scale-105 transition-all duration-300"
-            >
-              Get a Free Consultation
-              <ArrowRight className="ml-2 h-5 w-5 text-secondary" />
-            </Link>
-            <Link
-              href="/services"
-              className="inline-flex items-center justify-center rounded-xl border border-gray-600 bg-transparent px-8 py-4 text-lg font-semibold text-white hover:bg-white/10 hover:border-white transition-all duration-300"
-            >
-              Browse Services
-            </Link>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+            <div className="md:max-w-2xl">
+              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-3">
+                Stop Searching. <span className="text-teal-400">Start Hiring.</span>
+              </h2>
+              <p className="text-lg text-gray-400 font-medium">
+                Partner with KaaryaHire today for precision recruitment that scales with your ambition.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3.5 text-base font-bold text-primary shadow-lg hover:bg-teal-50 hover:scale-105 transition-all duration-300"
+              >
+                Get a Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5 text-secondary" />
+              </Link>
+            </div>
           </div>
-          <p className="mt-8 text-sm text-gray-400">
-            No obligation. 100% Confidential.
-          </p>
         </div>
       </section>
     </div>
