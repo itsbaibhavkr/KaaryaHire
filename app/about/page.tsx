@@ -1,5 +1,6 @@
 import { Target, Lightbulb, Users, Award, ShieldCheck, MapPin } from "lucide-react";
 import { Metadata } from 'next';
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: 'About Us | KaaryaHire',
@@ -53,18 +54,28 @@ export default function AboutPage() {
                         </div>
                         <div className="mt-12 lg:mt-0 relative">
                             <div className="absolute top-0 right-0 -mr-8 -mt-8 w-64 h-64 bg-teal-50 rounded-full blur-3xl opacity-60"></div>
-                            <div className="relative bg-white rounded-2xl p-8 shadow-xl border border-gray-100 transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                                <div className="flex items-center space-x-4 mb-6">
-                                    <div className="h-12 w-12 rounded-full bg-slate-100 flex items-center justify-center">
-                                        <Target className="h-6 w-6 text-primary" />
+
+                            {/* Image Container */}
+                            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-100 transform rotate-1 hover:rotate-0 transition-transform duration-700">
+                                <Image
+                                    src="/team_collaboration.png"
+                                    alt="KaaryaHire Team Collaboration"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-auto object-cover"
+                                />
+                            </div>
+
+                            {/* Floating Card */}
+                            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-xl border border-gray-100 max-w-xs transform -rotate-2 hover:rotate-0 transition-transform duration-500 hidden sm:block">
+                                <div className="flex items-center space-x-3 mb-3">
+                                    <div className="h-10 w-10 rounded-full bg-teal-50 flex items-center justify-center">
+                                        <Target className="h-5 w-5 text-secondary" />
                                     </div>
-                                    <div>
-                                        <h3 className="font-bold text-primary">Our Core Philosophy</h3>
-                                        <p className="text-xs text-muted">What drives us daily</p>
-                                    </div>
+                                    <h3 className="font-bold text-primary text-sm">Core Philosophy</h3>
                                 </div>
-                                <p className="text-gray-600 italic">
-                                    "We believe that a bad hire costs more than just money—it costs time, morale, and momentum. Our job is to protect your company's momentum by finding people who fit perfectly."
+                                <p className="text-sm text-gray-600 italic leading-relaxed">
+                                    "We protect your momentum by finding people who fit perfectly."
                                 </p>
                             </div>
                         </div>
