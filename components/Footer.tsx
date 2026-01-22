@@ -83,8 +83,8 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="mt-12 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
-                    <p className="text-sm text-gray-400 text-center md:text-left">
+                <div className="mt-12 border-t border-white/10 pt-8 flex flex-col items-center justify-center">
+                    <p className="text-sm text-gray-400 text-center">
                         &copy; {currentYear} KaaryaHire. All rights reserved.
                     </p>
                 </div>
