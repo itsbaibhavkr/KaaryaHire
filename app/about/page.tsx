@@ -10,13 +10,25 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <div className="bg-white">
-            {/* Hero Section */}
-            <div className="bg-slate-50 py-16 sm:py-24">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl">
+            {/* Hero Section with Background Image */}
+            <div className="relative py-24 sm:py-32 overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 w-full h-full z-0">
+                    <Image
+                        src="/about_hero_bg.png"
+                        alt="About Background"
+                        fill
+                        className="object-cover object-center"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-slate-900/80" />
+                </div>
+
+                <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl drop-shadow-sm">
                         About KaaryaHire
                     </h1>
-                    <p className="mx-auto mt-6 max-w-2xl text-lg text-muted">
+                    <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-200 leading-relaxed drop-shadow-sm">
                         We are more than just a recruitment agency; we are your strategic partners in growth.
                         Building stronger organizations, one hire at a time.
                     </p>
