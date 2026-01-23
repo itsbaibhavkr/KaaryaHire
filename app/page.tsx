@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Users, Building2, TrendingUp, MapPin, GraduationCap, Clock, UserCheck, ShieldCheck, HeartHandshake, Scale, Rocket, Store, Briefcase, Landmark } from "lucide-react";
 import { Metadata } from 'next';
+import HeroBackgroundSlider from "@/components/HeroBackgroundSlider";
 
 export const metadata: Metadata = {
   title: 'KaaryaHire - India\'s Premier Recruitment Agency',
@@ -12,18 +13,15 @@ export default function Home() {
     <div className="bg-white">
       {/* Hero Section */}
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white pt-16 pb-20 lg:pt-32 lg:pb-40">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.4]"></div>
-        <div className="absolute top-0 right-0 -z-10 h-[600px] w-[600px] rounded-full bg-blue-50/80 blur-3xl filter opacity-60 translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 left-0 -z-10 h-[600px] w-[600px] rounded-full bg-slate-50/80 blur-3xl filter opacity-60 -translate-x-1/2 translate-y-1/2"></div>
+      <section className="relative overflow-hidden pt-16 pb-20 lg:pt-32 lg:pb-40">
+        <HeroBackgroundSlider />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* Left Column: Text Content */}
             <div className="text-center lg:text-left relative z-10">
-              <div className="inline-flex items-center rounded-full border border-teal-100 bg-teal-50/50 px-4 py-1.5 text-sm font-semibold text-secondary mb-8 ring-1 ring-teal-500/10">
+              <div className="inline-flex items-center rounded-full border border-teal-500/30 bg-teal-900/50 px-4 py-1.5 text-sm font-semibold text-teal-300 mb-8 ring-1 ring-teal-500/20 backdrop-blur-sm">
                 <span className="relative flex h-2 w-2 mr-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
@@ -31,14 +29,14 @@ export default function Home() {
                 We are hiring 24/7 across India
               </div>
 
-              <h1 className="text-5xl font-extrabold tracking-tight text-primary sm:text-6xl lg:text-7xl lg:leading-[1.1] mb-6">
+              <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl lg:leading-[1.1] mb-6 drop-shadow-sm">
                 Recruit Industry <br className="hidden lg:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-blue-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-400">
                   Leaders & Experts
                 </span>
               </h1>
 
-              <p className="mt-6 text-lg sm:text-xl leading-relaxed text-muted max-w-2xl mx-auto lg:mx-0 font-medium">
+              <p className="mt-6 text-lg sm:text-xl leading-relaxed text-gray-200 max-w-2xl mx-auto lg:mx-0 font-medium drop-shadow-sm">
                 KaaryaHire connects ambitious companies with exceptional talent. From rapid scaling to executive search, we are your strategic partner in growth.
               </p>
 
@@ -51,83 +49,29 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-xl border border-gray-200 bg-white px-8 py-4 text-lg font-bold text-gray-900 shadow-sm hover:bg-gray-50 hover:border-gray-300 hover:-translate-y-0.5 transition-all duration-300 group"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-8 py-4 text-lg font-bold text-white shadow-sm hover:bg-white/20 hover:border-white/30 hover:-translate-y-0.5 transition-all duration-300 group backdrop-blur-sm"
                 >
                   Contact Us
-                  <ArrowRight className="ml-2 h-5 w-5 text-gray-400 group-hover:text-secondary group-hover:translate-x-1 transition-all" />
+                  <ArrowRight className="ml-2 h-5 w-5 text-gray-300 group-hover:text-white group-hover:translate-x-1 transition-all" />
                 </Link>
               </div>
 
-              <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 text-sm font-semibold text-gray-500">
+              <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 text-sm font-semibold text-gray-400">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    <div className="h-8 w-8 rounded-full ring-2 ring-white bg-gray-200"></div>
-                    <div className="h-8 w-8 rounded-full ring-2 ring-white bg-gray-300"></div>
-                    <div className="h-8 w-8 rounded-full ring-2 ring-white bg-gray-400"></div>
+                    <div className="h-8 w-8 rounded-full ring-2 ring-slate-900 bg-gray-200/80"></div>
+                    <div className="h-8 w-8 rounded-full ring-2 ring-slate-900 bg-gray-300/80"></div>
+                    <div className="h-8 w-8 rounded-full ring-2 ring-slate-900 bg-gray-400/80"></div>
                   </div>
-                  <span className="text-primary">500+ Roles Filled</span>
+                  <span className="text-gray-100">500+ Roles Filled</span>
                 </div>
-                <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-gray-300"></span>
-                <span className="flex items-center text-primary"><CheckCircle2 className="h-5 w-5 text-teal-500 mr-2" /> 98% Client Retention</span>
+                <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-gray-600"></span>
+                <span className="flex items-center text-gray-100"><CheckCircle2 className="h-5 w-5 text-teal-400 mr-2" /> 98% Client Retention</span>
               </div>
             </div>
 
-            {/* Right Column: Visual Mockup (CSS Composition) */}
-            <div className="relative hidden lg:block">
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-secondary to-blue-200 opacity-20 blur"></div>
-              <div className="relative rounded-2xl bg-white border border-gray-100 shadow-2xl p-6 transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                {/* Mock Header */}
-                <div className="flex items-center justify-between mb-8 border-b border-gray-100 pb-4">
-                  <div className="flex items-center space-x-2">
-                    <div className="h-3 w-3 rounded-full bg-red-400"></div>
-                    <div className="h-3 w-3 rounded-full bg-yellow-400"></div>
-                    <div className="h-3 w-3 rounded-full bg-green-400"></div>
-                  </div>
-                  <div className="text-xs font-mono text-gray-400">kaaryahire-dashboard.app</div>
-                </div>
-
-                {/* Mock Content */}
-                <div className="space-y-6">
-                  <div className="flex items-center p-4 bg-slate-50 rounded-xl border border-dashed border-gray-200">
-                    <div className="h-10 w-10 text-white bg-secondary rounded-full flex items-center justify-center font-bold">IT</div>
-                    <div className="ml-4 flex-1">
-                      <div className="h-2.5 bg-gray-200 rounded w-24 mb-2"></div>
-                      <div className="h-2 bg-gray-100 rounded w-32"></div>
-                    </div>
-                    <span className="text-green-600 font-bold text-sm bg-green-50 px-2 py-1 rounded">Active</span>
-                  </div>
-
-                  <div className="flex items-center p-4 bg-slate-50 rounded-xl border border-dashed border-gray-200">
-                    <div className="h-10 w-10 text-white bg-slate-700 rounded-full flex items-center justify-center font-bold">HR</div>
-                    <div className="ml-4 flex-1">
-                      <div className="h-2.5 bg-gray-200 rounded w-20 mb-2"></div>
-                      <div className="h-2 bg-gray-100 rounded w-28"></div>
-                    </div>
-                    <span className="text-blue-600 font-bold text-sm bg-blue-50 px-2 py-1 rounded">Screening</span>
-                  </div>
-
-                  <div className="flex items-center justify-between pt-2">
-                    <div className="text-sm text-gray-500">Total Placements</div>
-                    <div className="text-xl font-bold text-primary">1,240+</div>
-                  </div>
-                  <div className="w-full bg-gray-100 rounded-full h-2">
-                    <div className="bg-secondary h-2 rounded-full" style={{ width: '85%' }}></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Element */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg border border-gray-100 p-4 flex items-center animate-bounce duration-[3000ms]">
-                <div className="h-10 w-10 bg-green-100 rounded-full flex items-center justify-center">
-                  <CheckCircle2 className="h-6 w-6 text-green-600" />
-                </div>
-                <div className="ml-3">
-                  <p className="text-xs text-gray-500 font-semibold uppercase">Status</p>
-                  <p className="text-sm font-bold text-gray-900">Candidate Hired!</p>
-                </div>
-              </div>
-
-            </div>
+            {/* Right Column: Empty to allow background image visibility */}
+            <div className="hidden lg:block"></div>
           </div>
         </div>
       </section>
