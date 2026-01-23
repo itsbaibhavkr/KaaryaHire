@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -42,19 +42,19 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Legal */}
+                    {/* Contact Us */}
                     <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-100">Legal</h3>
+                        <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-100">Contact Us</h3>
                         <ul className="mt-4 space-y-2">
                             <li>
-                                <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
-                                    Privacy Policy
-                                </Link>
+                                <a href="mailto:support@kaaryahire.com" className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                                    <Mail className="h-4 w-4" /> support@kaaryahire.com
+                                </a>
                             </li>
                             <li>
-                                <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
-                                    Terms of Service
-                                </Link>
+                                <a href="tel:+918069640746" className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                                    <Phone className="h-4 w-4" /> +91 8069640746
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -63,19 +63,15 @@ const Footer = () => {
                     <div>
                         <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-100">Follow Us</h3>
                         <div className="mt-4 flex space-x-4">
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                            <a href="https://www.facebook.com/profile.php?id=61586833107162" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                                 <span className="sr-only">Facebook</span>
                                 <Facebook className="h-5 w-5" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                <span className="sr-only">Twitter</span>
-                                <Twitter className="h-5 w-5" />
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                            <a href="https://www.linkedin.com/company/kaaryahire/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                                 <span className="sr-only">LinkedIn</span>
                                 <Linkedin className="h-5 w-5" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                            <a href="https://www.instagram.com/kaaryahire" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                                 <span className="sr-only">Instagram</span>
                                 <Instagram className="h-5 w-5" />
                             </a>

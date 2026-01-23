@@ -9,46 +9,81 @@ export const metadata: Metadata = {
 
 const services = [
     {
-        title: "IT Staffing",
-        bestFor: "Best for: Tech & Product Cos",
-        description: "We navigate the competitive tech landscape to source specialized developers and engineers who strictly align with your technical stack and project timelines.",
-        outcome: "Outcome: Pre-vetted technical talent deployed in record time.",
-        image: "/service_tech.png",
-    },
-    {
-        title: "Non-IT Staffing",
-        bestFor: "Best for: Manufacturing & Retail",
-        description: "Reliable workforce solutions for operational excellence. We close bulk and niche positions across healthcare, sales, and administration with a focus on retention.",
-        outcome: "Outcome: Stable, high-performing teams for critical operations.",
-        image: "/service_recruitment.png",
-    },
-    {
-        title: "Campus Placement",
-        bestFor: "Best for: Graduate Hiring",
-        description: "End-to-end management of campus drives. We identify and assess high-potential freshers ready to be molded into your future leaders.",
-        outcome: "Outcome: A consistent pipeline of energetic, cost-effective talent.",
-        image: "/service_campus.png",
-    },
-    {
-        title: "Executive Search",
-        bestFor: "Best for: C-Suite & VPs",
-        description: "Discreet and precise headhunting for senior leadership. We leverage deep networks to find proven visionaries capable of driving organizational change.",
-        outcome: "Outcome: Strategic leadership hires that directly impact growth.",
+        title: "Permanent Staffing (Full-Time Recruitment)",
+        tagline: "Building your core team with long-term assets.",
+        inclusions: [
+            "End-to-End Executive Search",
+            "Technical & Cultural Fit Assessment",
+            "Background Verification Checks",
+            "Post-Onboarding Support"
+        ],
         image: "/service_executive.png",
     },
     {
-        title: "Career Counselling",
-        bestFor: "Best for: Professionals",
-        description: "Strategic mentorship for candidates navigating complex career paths. We align individual skills with market realities to foster long-term professional success.",
-        outcome: "Outcome: Informed career decisions and higher job satisfaction.",
+        title: "Contract / Temporary Staffing",
+        tagline: "Flexible workforce solutions for dynamic business needs.",
+        inclusions: [
+            "Project-Based Hiring",
+            "Seasonal Staffing Support",
+            "Payroll & Compliance Management",
+            "Immediate Resource Deployment"
+        ],
+        image: "/service_contract.png",
+    },
+    {
+        title: "Bulk Hiring Solutions",
+        tagline: "Scaling your workforce rapidly without compromising quality.",
+        inclusions: [
+            "High-Volume Recruitment Drives",
+            "Campus Placement Management",
+            "Walk-in Drive Organization",
+            "Automated Screening Process"
+        ],
+        image: "/service_campus.png",
+    },
+    {
+        title: "Entry-Level & Mid-Level Hiring",
+        tagline: "Connecting you with rising stars and experienced professionals.",
+        inclusions: [
+            "Fresh Graduate Recruitment",
+            "Junior to Mid-Senior Roles",
+            "Skill-Based Candidate Filtering",
+            "Interview Scheduling & Coordination"
+        ],
+        image: "/service_recruitment.png",
+    },
+    {
+        title: "Industry-Specific Hiring",
+        tagline: "Specialized talent for niche market requirements.",
+        inclusions: [
+            "IT & Non-IT Recruitment",
+            "Healthcare & Pharma Staffing",
+            "Manufacturing & Engineering Roles",
+            "Hospitality & Retail Hiring"
+        ],
+        image: "/service_tech.png",
+    },
+    {
+        title: "Replacement Hiring Support",
+        tagline: "Ensuring business continuity with quick backfills.",
+        inclusions: [
+            "Quick Turnaround for Attrition",
+            "Backup Resource Planning",
+            "Transition Management",
+            "Guaranteed Replacement Period"
+        ],
         image: "/service_hr.png",
     },
     {
-        title: "Payroll Management",
-        bestFor: "Best for: Compliance & Ops",
-        description: "Full-cycle payroll processing tailored to Indian statutory norms (PF, ESIC, Tax). We eliminate errors and ensure timely disbursement for your workforce.",
-        outcome: "Outcome: Zero non-compliance risk and streamlined operations.",
-        image: "/service_contract.png",
+        title: "On-Request Hiring & Consulting",
+        tagline: "Tailored recruitment strategies for unique challenges.",
+        inclusions: [
+            "Market Mapping & Salary Benchmarking",
+            "Diversity & Inclusion Hiring",
+            "Recruitment Process Outsourcing (RPO)",
+            "HR Policy Consultation"
+        ],
+        image: "/team_collaboration.png",
     },
 ];
 
@@ -59,11 +94,10 @@ export default function ServicesPage() {
             <div className="bg-slate-50 py-16 sm:py-24">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl">
-                        Our Recruitment Services
+                        Recruitment & Staffing Services
                     </h1>
                     <p className="mx-auto mt-6 max-w-2xl text-lg text-muted">
-                        Comprehensive workforce solutions designed to scale your business.
-                        We connect the right talent with the right opportunities.
+                        At KaaryaHire, we provide a focused and personalized recruitment experience specifically tailored to the dynamic Indian market. We prioritize building trust by deeply understanding your organization’s needs, ensuring we connect you with committed talent that drives long-term success.
                     </p>
                 </div>
             </div>
@@ -86,24 +120,21 @@ export default function ServicesPage() {
                                         className="object-contain"
                                     />
                                 </div>
-                                <span className="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-secondary ring-1 ring-inset ring-blue-700/10">
-                                    {service.bestFor}
-                                </span>
                             </div>
 
                             <h3 className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
                                 {service.title}
                             </h3>
 
-                            <p className="mt-4 text-muted leading-relaxed flex-grow">
-                                {service.description}
+                            <p className="mt-2 text-sm italic text-secondary font-medium">
+                                {service.tagline}
                             </p>
 
-                            <div className="mt-6 p-3 bg-slate-50 rounded-lg border border-gray-100">
-                                <p className="text-sm font-semibold text-primary">
-                                    {service.outcome}
-                                </p>
-                            </div>
+                            <ul className="mt-6 list-disc pl-5 space-y-2 text-muted text-sm flex-grow leading-relaxed">
+                                {service.inclusions.map((item, i) => (
+                                    <li key={i}>{item}</li>
+                                ))}
+                            </ul>
                         </div>
                     ))}
                 </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Facebook, Linkedin, Instagram } from "lucide-react";
 
 export default function ContactPage() {
     const handleSubmit = (e: React.FormEvent) => {
@@ -32,6 +32,8 @@ export default function ContactPage() {
                             Get in Touch
                         </h2>
                         <div className="space-y-8">
+
+
                             <div className="flex items-start">
                                 <div className="flex-shrink-0">
                                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
@@ -43,8 +45,8 @@ export default function ContactPage() {
                                     <p className="mt-2 text-muted">
                                         Mon-Fri from 9am to 6pm
                                     </p>
-                                    <a href="tel:+911234567890" className="mt-1 block text-lg font-semibold text-secondary hover:text-blue-700">
-                                        +91 12345 67890
+                                    <a href="tel:+918069640746" className="mt-1 block text-lg font-semibold text-secondary hover:text-blue-700">
+                                        +91 8069640746
                                     </a>
                                 </div>
                             </div>
@@ -60,8 +62,8 @@ export default function ContactPage() {
                                     <p className="mt-2 text-muted">
                                         For all general inquiries
                                     </p>
-                                    <a href="mailto:hello@kaaryahire.com" className="mt-1 block text-lg font-semibold text-secondary hover:text-blue-700">
-                                        hello@kaaryahire.com
+                                    <a href="mailto:support@kaaryahire.com" className="mt-1 block text-lg font-semibold text-secondary hover:text-blue-700">
+                                        support@kaaryahire.com
                                     </a>
                                 </div>
                             </div>
@@ -82,6 +84,24 @@ export default function ContactPage() {
                                         Noida, Uttar Pradesh, 201301<br />
                                         India
                                     </p>
+                                </div>
+                            </div>
+
+                            <div className="pt-8 border-t border-gray-100">
+                                <h3 className="text-lg font-medium text-primary mb-4">Follow Us</h3>
+                                <div className="flex space-x-6">
+                                    <a href="https://www.facebook.com/profile.php?id=61586833107162" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-secondary transition-colors">
+                                        <span className="sr-only">Facebook</span>
+                                        <Facebook className="h-6 w-6" />
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/kaaryahire/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-secondary transition-colors">
+                                        <span className="sr-only">LinkedIn</span>
+                                        <Linkedin className="h-6 w-6" />
+                                    </a>
+                                    <a href="https://www.instagram.com/kaaryahire" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-secondary transition-colors">
+                                        <span className="sr-only">Instagram</span>
+                                        <Instagram className="h-6 w-6" />
+                                    </a>
                                 </div>
                             </div>
                         </div>
