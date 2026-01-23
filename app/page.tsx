@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle2, Users, Building2, TrendingUp, MapPin, GraduationCap, Clock, UserCheck, ShieldCheck, HeartHandshake, Scale, Rocket, Store, Briefcase, Landmark } from "lucide-react";
 import { Metadata } from 'next';
 import HeroBackgroundSlider from "@/components/HeroBackgroundSlider";
@@ -207,50 +208,92 @@ export default function Home() {
 
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Service 1 */}
-            <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:shadow-md hover:border-secondary/20">
-              <h3 className="text-xl font-semibold text-primary">IT Recruitment</h3>
-              <p className="mt-4 text-muted">
-                Software Developers, Data Scientists, System Architects, and more technical roles.
+            <div className="group relative flex flex-col rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:shadow-md hover:border-secondary/20 hover:-translate-y-1">
+              <div className="mb-6 flex items-start justify-between">
+                <div className="h-16 w-16 relative">
+                  <Image
+                    src="/service_executive.png"
+                    alt="Permanent Staffing"
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+
+              <h3 className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
+                Permanent Staffing (Full-Time Recruitment)
+              </h3>
+
+              <p className="mt-2 text-sm italic text-secondary font-medium">
+                Building your core team with long-term assets.
               </p>
-              <ul className="mt-6 space-y-3">
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle2 className="mr-2 h-4 w-4 text-secondary" /> Frontend & Backend
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle2 className="mr-2 h-4 w-4 text-secondary" /> DevOps & Cloud
-                </li>
+
+              <ul className="mt-6 list-disc pl-5 space-y-2 text-muted text-sm flex-grow leading-relaxed">
+                <li>End-to-End Executive Search</li>
+                <li>Technical & Cultural Fit Assessment</li>
+                <li>Background Verification Checks</li>
+                <li>Post-Onboarding Support</li>
               </ul>
             </div>
 
             {/* Service 2 */}
-            <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:shadow-md hover:border-secondary/20">
-              <h3 className="text-xl font-semibold text-primary">Non-IT Hiring</h3>
-              <p className="mt-4 text-muted">
-                Sales, Marketing, HR, Finance, and Operations professionals for your core business.
+            <div className="group relative flex flex-col rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:shadow-md hover:border-secondary/20 hover:-translate-y-1">
+              <div className="mb-6 flex items-start justify-between">
+                <div className="h-16 w-16 relative">
+                  <Image
+                    src="/service_contract.png"
+                    alt="Contract / Temporary Staffing"
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+
+              <h3 className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
+                Contract / Temporary Staffing
+              </h3>
+
+              <p className="mt-2 text-sm italic text-secondary font-medium">
+                Flexible workforce solutions for dynamic business needs.
               </p>
-              <ul className="mt-6 space-y-3">
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle2 className="mr-2 h-4 w-4 text-secondary" /> Sales Executives
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle2 className="mr-2 h-4 w-4 text-secondary" /> Digital Marketers
-                </li>
+
+              <ul className="mt-6 list-disc pl-5 space-y-2 text-muted text-sm flex-grow leading-relaxed">
+                <li>Project-Based Hiring</li>
+                <li>Seasonal Staffing Support</li>
+                <li>Payroll & Compliance Management</li>
+                <li>Immediate Resource Deployment</li>
               </ul>
             </div>
 
             {/* Service 3 */}
-            <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:shadow-md hover:border-secondary/20">
-              <h3 className="text-xl font-semibold text-primary">Executive Search</h3>
-              <p className="mt-4 text-muted">
-                Leadership hiring for C-suite roles and senior management positions.
+            <div className="group relative flex flex-col rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:shadow-md hover:border-secondary/20 hover:-translate-y-1">
+              <div className="mb-6 flex items-start justify-between">
+                <div className="h-16 w-16 relative">
+                  <Image
+                    src="/service_tech.png"
+                    alt="Industry-Specific Hiring"
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+
+              <h3 className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
+                Industry-Specific Hiring
+              </h3>
+
+              <p className="mt-2 text-sm italic text-secondary font-medium">
+                Specialized talent for niche market requirements.
               </p>
-              <ul className="mt-6 space-y-3">
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle2 className="mr-2 h-4 w-4 text-secondary" /> Directors & VPs
-                </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle2 className="mr-2 h-4 w-4 text-secondary" /> Branch Heads
-                </li>
+
+              <ul className="mt-6 list-disc pl-5 space-y-2 text-muted text-sm flex-grow leading-relaxed">
+                <li>IT & Non-IT Recruitment</li>
+                <li>Healthcare & Pharma Staffing</li>
+                <li>Manufacturing & Engineering Roles</li>
+                <li>Hospitality & Retail Hiring</li>
               </ul>
             </div>
           </div>
