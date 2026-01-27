@@ -1,12 +1,47 @@
 "use client";
 
+import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Facebook, Linkedin, Instagram } from "lucide-react";
 import Image from "next/image";
 
 export default function ContactPage() {
-    const handleSubmit = (e: React.FormEvent) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        alert("Thank you for your message. We will get back to you shortly!");
+        setIsSubmitting(true);
+
+        const formData = new FormData(e.currentTarget);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            message: formData.get('message'),
+        };
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                alert("Message sent successfully!");
+                (e.target as HTMLFormElement).reset();
+            } else {
+                alert("Error sending message.");
+            }
+        } catch (error) {
+            console.error(error);
+            alert("An error occurred. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -206,9 +241,11 @@ export default function ContactPage() {
                             <div>
                                 <button
                                     type="submit"
-                                    className="flex w-full justify-center items-center rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 transition-all"
+                                    disabled={isSubmitting}
+                                    className="flex w-full justify-center items-center rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
-                                    Send Message <Send className="ml-2 h-4 w-4" />
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                                    {!isSubmitting && <Send className="ml-2 h-4 w-4" />}
                                 </button>
                             </div>
                         </form>
