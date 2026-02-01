@@ -17,7 +17,7 @@ export async function POST(request: Request) {
         const transporter = nodemailer.createTransport({
             host: "mail.kaaryahire.com",
             port: 587,
-            secure: false, // Use STARTTLS
+            secure: true, // Use STARTTLS
             auth: {
                 user: "support@kaaryahire.com",
                 pass: process.env.EMAIL_PASSWORD?.trim(),
