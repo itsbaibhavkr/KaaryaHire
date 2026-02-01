@@ -1,4 +1,3 @@
-export const runtime = 'nodejs';
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
@@ -18,7 +17,7 @@ export async function POST(request: Request) {
         const transporter = nodemailer.createTransport({
             host: "mail.kaaryahire.com",
             port: 587,
-            secure: true, // Use STARTTLS
+            secure: false, // Use STARTTLS
             auth: {
                 user: "support@kaaryahire.com",
                 pass: process.env.EMAIL_PASSWORD?.trim(),
