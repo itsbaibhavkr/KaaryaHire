@@ -94,7 +94,7 @@ export default function ContactPage() {
                                         Mon-Fri from 9am to 6pm
                                     </p>
                                     <a href="tel:+918069640746" className="mt-1 block text-lg font-semibold text-secondary hover:text-blue-700">
-                                        +91 8069640746
+                                        +91 806-964-0746
                                     </a>
                                 </div>
                             </div>
@@ -128,8 +128,8 @@ export default function ContactPage() {
                                         Come say hello at our HQ
                                     </p>
                                     <p className="mt-1 text-base text-gray-900">
-                                        123 Business Park, Sector 62,<br />
-                                        Noida, Uttar Pradesh, 201301<br />
+                                        Sector 62, Noida<br />
+                                        Uttar Pradesh, 201301<br />
                                         India
                                     </p>
                                 </div>
@@ -159,8 +159,8 @@ export default function ContactPage() {
                             <p className="text-muted mb-4">
                                 Send your resume directly to our HR team for consideration in upcoming roles.
                             </p>
-                            <a href="mailto:careers@kaaryahire.com" className="text-secondary font-medium hover:underline">
-                                careers@kaaryahire.com &rarr;
+                            <a href="mailto:support@kaaryahire.com" className="text-secondary font-medium hover:underline">
+                                support@kaaryahire.com &rarr;
                             </a>
                         </div>
                     </div>
