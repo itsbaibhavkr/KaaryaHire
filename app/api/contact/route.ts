@@ -20,7 +20,7 @@ export async function POST(request: Request) {
             secure: false, // Use STARTTLS
             auth: {
                 user: "support@kaaryahire.com",
-                pass: process.env.EMAIL_PASSWORD?.trim(),
+                pass: "Support@2026"
             },
         });
 
