@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
@@ -12,8 +13,14 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Brand & Tagline */}
                     <div className="col-span-1 md:col-span-1">
-                        <Link href="/" className="text-2xl font-bold text-white">
-                            Kaarya<span className="text-secondary">Hire</span>
+                        <Link href="/" className="flex items-center">
+                            <Image
+                                src="/logo.png"
+                                alt="KaaryaHire Logo"
+                                width={500}
+                                height={120}
+                                className="h-12 w-auto object-contain brightness-0 invert"
+                            />
                         </Link>
                         <p className="mt-4 text-sm text-gray-300 leading-relaxed">
                             Connecting top talent with leading companies across India. We simplify recruitment for a better future.

@@ -34,7 +34,7 @@ export default function HeroBackgroundSlider() {
                         fill
                         className="object-cover object-center"
                         priority={index === 0}
-                        quality={90}
+                        quality={75}
                     />
                 </div>
             ))}
