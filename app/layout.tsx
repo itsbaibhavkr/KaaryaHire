@@ -19,17 +19,20 @@ export const metadata: Metadata = {
     default: "KaaryaHire | Recruitment & Staffing Solutions in India",
     template: "%s | KaaryaHire",
   },
-  description: "KaaryaHire provides top-tier recruitment and staffing solutions in India. Specializing in bulk hiring, contract staffing, and executive recruitment to connect top talent with leading companies.",
+  description: "KaaryaHire provides professional recruitment and staffing services including permanent, contract, bulk and industry-specific hiring solutions across India.",
   keywords: ["recruitment", "staffing", "bulk hiring", "contract staffing"],
   openGraph: {
     title: "KaaryaHire | Recruitment & Staffing Solutions in India",
-    description: "KaaryaHire provides top-tier recruitment and staffing solutions in India. Specializing in bulk hiring, contract staffing, and executive recruitment to connect top talent with leading companies.",
+    description: "KaaryaHire provides professional recruitment and staffing services including permanent, contract, bulk and industry-specific hiring solutions across India.",
     url: "https://kaaryahire.com",
     siteName: "KaaryaHire",
     images: [
       {
-        url: "/logo.png",
-      },
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "KaaryaHire Recruitment & Staffing Solutions"
+      }
     ],
     type: "website",
   },
