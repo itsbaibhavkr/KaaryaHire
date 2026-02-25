@@ -14,8 +14,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KaaryaHire - Premier Recruitment Solutions",
-  description: "Connecting top talent with leading companies across India. Your trusted partner in recruitment.",
+  metadataBase: new URL("https://kaaryahire.com"),
+  title: {
+    default: "KaaryaHire | Recruitment & Staffing Solutions in India",
+    template: "%s | KaaryaHire",
+  },
+  description: "KaaryaHire provides top-tier recruitment and staffing solutions in India. Specializing in bulk hiring, contract staffing, and executive recruitment to connect top talent with leading companies.",
+  keywords: ["recruitment", "staffing", "bulk hiring", "contract staffing"],
+  openGraph: {
+    title: "KaaryaHire | Recruitment & Staffing Solutions in India",
+    description: "KaaryaHire provides top-tier recruitment and staffing solutions in India. Specializing in bulk hiring, contract staffing, and executive recruitment to connect top talent with leading companies.",
+    url: "https://kaaryahire.com",
+    siteName: "KaaryaHire",
+    images: [
+      {
+        url: "/logo.png",
+      },
+    ],
+    type: "website",
+  },
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
@@ -52,6 +69,24 @@ export default function RootLayout({
           gtag('config', 'G-DKGBPDZQBV');
         `}
       </Script>
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "KaaryaHire",
+            url: "https://kaaryahire.com",
+            logo: "https://kaaryahire.com/logo.png",
+            sameAs: [
+              "https://www.instagram.com/kaaryahire",
+              "https://www.facebook.com/profile.php?id=61586833107162",
+              "https://www.linkedin.com/company/kaaryahire/"
+            ]
+          })
+        }}
+      />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
